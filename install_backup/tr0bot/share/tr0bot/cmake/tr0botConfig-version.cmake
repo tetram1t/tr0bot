@@ -1,0 +1,1 @@
+/home/tetramit/dev_ws/src/build/tr0bot/ament_cmake_core/tr0botConfig-version.cmake

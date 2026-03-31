@@ -1,0 +1,4 @@
+source;share/tr0bot/local_setup.bash
+source;share/tr0bot/local_setup.dsv
+source;share/tr0bot/local_setup.sh
+source;share/tr0bot/local_setup.zsh

@@ -1,7 +1,31 @@
-## Robot Package Template
+# tr0bot ROS 2 Workspace (Desktop Side)
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+Этот репозиторий содержит полный воркспейс `dev_ws` для проекта мобильного робота `tr0bot`. 
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `tr0bot` to whatever your project's name is.
+> [!IMPORTANT]
+> Данная часть проекта предназначена для **настольного компьютера** (управляющей станции). Код для бортового компьютера робота будет добавлен позже.
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+## Структура проекта
+- `src/tr0bot` — основной пакет с описанием робота (URDF), параметрами навигации и запусками.
+- `src/serial_motor_demo` — драйверы для моторов.
+- `src/rosbridge_suite` — мост для связи с веб-интерфейсами.
+- `section_8_research.md` — документация по исследованию эффективности навигации.
+
+## Установка
+1. Склонируйте репозиторий:
+   ```bash
+   git clone https://github.com/tetram1t/tr0bot.git
+   ```
+2. Установите зависимости:
+   ```bash
+   rosdep install --from-paths src --ignore-src -r -y
+   ```
+3. Соберите проект:
+   ```bash
+   colcon build
+   ```
+
+## Запуск симуляции
+```bash
+ros2 launch tr0bot launch_sim.launch.py
+```
